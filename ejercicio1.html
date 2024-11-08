@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("ingrese un numero"));
+        let num2 = parseFloat(prompt("ingresa el numero2"));
+        let op =prompt("que opercacion deseas realizar")
+
+        let respuesta = calculadora(num1, num2,op);
+
+
+        alert("la respuesta es : " + respuesta);
+
+       
+        
+       function calculadora(numero1 , numero2, operacion) 
+       {
+                let resultado;
+            switch (operacion) {
+                case "+":
+                    resultado = sumar(numero1,numero2);
+                    return resultado;
+                    break;
+                case "-":
+                    resultado = restar(numero1,numero2);
+                    return resultado;
+                    break;
+                case "*":
+                    resultado = multiplicar(numero1,numero2);
+                    return resultado;
+                    break;
+                case "/":
+                    resultado = dividir(numero1,numero2);
+                    return resultado;
+                    break;
+            
+                default:
+                    return "operacion nula"
+                    break;
+            }
+       }
+       function sumar(a,b) {
+        let respuesta=0;
+        respuesta = a+b;
+        return respuesta;
+
+        
+       }
+       function restar(a,b) {
+        let respuesta=0;
+        respuesta = a-b;
+        return respuesta;
+        
+       }
+       function multiplicar(a,b) {
+        let respuesta=0;
+        respuesta = a*b;
+        return respuesta;
+        
+       }
+
+       function dividir(a,b) {
+        let respuesta=0;
+        respuesta = a/b;
+        return respuesta;
+       
+       }
+
+      /*9 alert("la suma es "+ sumar(5,16));
+       alert("la resta es "+ restar(5,16));
+       alert("la multiplicacion es "+ multiplicar(5,16));
+       alert("la divicion es "+ dividir(5,0));*/
+    </script>
+</body>
+</html>
